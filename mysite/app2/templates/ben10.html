@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        body {
+    background-image: url("{% static 'cn.jpg' %}"); /* Specify the path to your background image */
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Make the background fixed while scrolling */
+    margin: 0; /* Remove default body margin */
+    padding: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Ben 10 Card -->
+        <div class="card-horizontal">
+            <div class="card-content">
+                <h2>Ben 10</h2>
+                <p>Ben 10 is a popular animated series about a young boy named Ben who discovers a powerful watch-like device called the Omnitrix, allowing him to transform into various aliens with unique abilities.</p>
+                <a href="{% url 'main' %}" class="card-btn">Go back to main</a>
+            </div>
+            <div class="card-image-right">
+                <img src="{% static 'ben10.jpg' %}" alt="Ben 10 Image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

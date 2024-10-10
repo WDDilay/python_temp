@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Character Cards</title>
+    <style>
+        body {
+            background-image: url("{% static 'cn.jpg' %}"); /* Specify the path to your background image */
+            background-size: cover; /* Ensure the image covers the entire page */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-attachment: fixed; /* Make the background fixed while scrolling */
+             margin: 0; /* Remove default body margin */
+            padding: 0;
+        }
+    </style>
+</head>
+<body> 
+    <div class="container">
+        <!-- First card with Ben 10 -->
+        <div class="card">
+            <img class="card-image" src="{% static 'ben10.jpg' %}" alt="Ben 10 Image">
+            <a href="{% url 'ben10' %}" class="card-btn">View Ben 10</a>
+        </div>
+
+        <!-- Second card with Tom and Jerry -->
+        <div class="card">
+            <img class="card-image" src="{% static 'tomandjerry.jpg' %}" alt="Tom and Jerry Image">
+            <a href="{% url 'tom' %}" class="card-btn">View Tom and Jerry</a>
+        </div> 
+
+        <div class="button-container">
+            <a href="{% url 'sample' %}" class="polls-btn">Go to Polls</a> <!-- Replace 'polls' with the actual URL name for your app -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        body {
+    background-image: url("{% static 'cn.jpg' %}"); /* Specify the path to your background image */
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Make the background fixed while scrolling */
+    margin: 0; /* Remove default body margin */
+    padding: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Ben 10 Card -->
+        <div class="card-horizontal">
+            <div class="card-content">
+                <h2>Tom and Jerry</h2>
+                <p>Tom and Jerry is one of the most beloved animated series, created in 1940 by William Hanna and Joseph Barbera. This iconic cartoon centers around the comedic rivalry between Tom, a house cat, and Jerry, a clever mouse, with their endless chases leading to hilarious moments. Despite their conflicts, Tom and Jerry often find themselves teaming up in tricky situations, showcasing their surprising bond.
+
+                    Their slapstick humor and clever antics have made the show timeless, continuing to entertain generations of fans worldwide, including here in the Philippines, where Tom and Jerry remains a favorite among children and adults alike.</p>
+                <a href="{% url 'main' %}" class="card-btn">Go back to main</a>
+            </div>
+            <div class="card-image-right">
+                <img src="{% static 'tomandjerry.jpg' %}" alt="Tom and Jerry Image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
